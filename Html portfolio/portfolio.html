@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <title>Portofolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c65c1c39b9.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Image/Logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#activity">ACTIVITY</a></li>
+                        <li><a href="#Contacts">CONTACTS</a></li>
+                        <i class="fas -solid fa-square-xmark" onclick="closemenu()"></i>
+                    </ul>
+
+                    <i class="fas -solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>STUDENT</p>
+                    <h1>HELLO, I'm <span>Gabriel Guevara</span> <br>From <span>BSEMC UCC </span></h1>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------about---------- -->
+        <div id="about"></div>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/profile2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="abtp">Hi! I’m <span>Gabriel Guevara, </span> currently pursuing a <span>Bachelor of Science in Entertainment and Multimedia Computing </span> (BSEMC), 
+                        majoring in Game Development at the <span>University of Caloocan City.</span>
+                        This portfolio showcases my work and projects for the subject <span>Computer Graphics.</span>
+                        It reflects the skills I’ve developed, my creativity, and my passion for digital art and design.</p>
+                        
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Act 1')">Act 1</p>
+                            <p class="tab-links" onclick="opentab('Act 2')">Act 2</p>
+                            <p class="tab-links" onclick="opentab('Act 3')">Act 3</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Act 1">
+                                <img src="Image/DcAct.png">
+                        </div>
+                        <div class="tab-contents" id="Act 2">
+                            <img src="Image/svgAct.png">
+                    </div>
+                    <div class="tab-contents" id="Act 3">
+                        <img src="Image/actnavbar.png">
+                </div>
+                     </div>
+                </div>
+            </div>
+            <!--    Activity    -->
+                <div id="activity">
+                <div class="container">
+                    <h1 class="sub-title"> My Activities</h1>
+                    <div class="activities-list">
+                        <div class="activities">
+                            <img src="Image/Row1.png">
+                           <div class="layer">
+                            <h3>Activity 1</h3>
+                            <p> In this activity, we created a website based on a recipe that we personally liked. 
+                                While developing the website, I learned how different files work together to create a functional webpage. 
+                                I also explored how to properly align images and text to make the design visually appealing and user-friendly. 
+                                This activity helped me understand the basic structure of <span>HTML</span> and how to style elements using <span>CSS</span>, 
+                                especially when it comes to layout and visual presentation.</p>
+                           </div>
+                        </div>
+                        <div class="activities">
+                            <img src="Image/Row2.png">
+                            <div class = "layer">
+                            <h3> Activity 2</h3>
+                            <p> the second activity, we worked on creating an <span>SVG (Scalable Vector Graphics) </span> file that could be animated. 
+                                Through this task, I discovered various tools and <span>CSS</span>properties that can be used to bring static graphics to life with animation. 
+                                I learned how to manipulate <span>SVG</span> elements using <span>CSS</span>transitions and keyframes, 
+                                which gave me a better appreciation for how animations can enhance the interactivity and engagement of a website. 
+                                These skills will be valuable for future web development projects where motion can improve user experience.</p>
+                        </div>
+                        
+                        </div>
+                        <div class="activities">
+                            <img src="Image/Row3.png">
+                            <div class = "layer">
+                            <h3>Activity 3</h3>
+                            <p> the third activity, we designed a responsive navigation bar that adapts to different screen sizes. 
+                                This project taught me the importance of creating layouts that are functional and visually consistent across various devices, 
+                                from mobile phones to desktop computers. I learned about media queries in <span>CSS</span> and how to apply different styles based on screen resolution. 
+                                This activity helped me become more aware of the importance of responsive design and gave me a deeper understanding of how to plan and build websites
+                                that are accessible and user-friendly on all types of gadgets.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-------------- Contacts-->
+            <div id="Contacts">
+                <div class="container">
+                    <h1 class ="sub-title">Contacts</h1>
+                    <div class="contact-list">
+                        <div>
+                            <h2 class="FB">Facebook</h2>
+                            <p>Facebook name: Gabriel Guevara</p>
+                            <a href="https://www.facebook.com/gabriel.guevara.766658" target="_blank">Learn More</a>
+                        </div>
+                        <div>
+                            <h2 class="CI">Contact Info</h2>
+                            <p>Phone Number: 09951297129</p>
+                        </div>
+                        <div>
+                            <h2 class="IG">Instagram</h2>
+                            <p>Instagram name: @Irbg0</p>
+                            <a href="https://www.instagram.com/lrbg0/" target="_blank">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+    
+
+    </body>
+</html>
